@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:untitleddoctor/core/utils/color_manager.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitleddoctor/core/utils/images_manager.dart';
 import 'package:untitleddoctor/core/utils/spacing.dart';
-
-// import '../data/model/massage_model.dart';
+import 'package:untitleddoctor/core/utils/value_manager.dart';
 import '../widget/fack_message.dart';
 import '../widget/message_widget.dart';
 import '../widget/row_text_form_field_chat.dart';
@@ -17,50 +16,51 @@ class ChatScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(
-              height: 60,
-              width: double.infinity,
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Icon(Icons.arrow_back_ios, color: Colors.blue),
-                      ),
-                      horizontalSpace(20),
-                      CircleAvatar(
-                        backgroundImage: AssetImage(
-                          ImagesManager.popularDoctor,
+            Padding(
+              padding: const EdgeInsets.only(right: AppPadding.p8),
+              child: SizedBox(
+                height: 60.h,
+                width: double.infinity,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: Icon(Icons.arrow_back_ios, color: Colors.blue),
                         ),
-                        maxRadius: 22,
-                      ),
-                      horizontalSpace(8),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Dr. Fillerup Grab',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                        CircleAvatar(
+                          backgroundImage: AssetImage(
+                            ImagesManager.popularDoctor,
+                          ),
+                          maxRadius: 22,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Dr. Fillerup Grab',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'tap here for contact info',
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                      horizontalSpace(45),
-                      Icon(Icons.video_call, color: Colors.blue, size: 30),
-                      horizontalSpace(20),
-                      Icon(Icons.call, color: Colors.blue, size: 30),
-                    ],
-                  ),
-                ],
+                            Text(
+                              'tap here for contact info',
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                        const Spacer(),
+                        Icon(Icons.video_call, color: Colors.blue, size: 30),
+                        horizontalSpace(AppSize.s15),
+                        Icon(Icons.call, color: Colors.blue, size: 30),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             Expanded(

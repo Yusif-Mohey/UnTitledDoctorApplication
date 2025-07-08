@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitleddoctor/core/utils/color_manager.dart';
+// import 'package:untitleddoctor/feature/chat/view/chat_screen.dart';
+// import 'package:untitleddoctor/feature/chat/view/mean_chat_screen.dart';
 
 import 'feature/splash/presentation/pages/splash_screen.dart';
 
@@ -40,6 +42,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF0EBE7F)),
         ),
         home: SplashScreen(),
+        // home: MeanChatScreen(),
       ),
     );
   }

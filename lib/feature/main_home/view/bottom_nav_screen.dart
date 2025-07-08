@@ -31,6 +31,14 @@ class NavBarView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(
+          'Doctor App',
+          style: TextStyle(
+            fontSize: 22,
+            color: ColorManager.whit,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         leading: IconButton(
           icon: Icon(Icons.menu),
           onPressed: () {

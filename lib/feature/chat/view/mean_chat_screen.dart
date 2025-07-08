@@ -29,18 +29,21 @@ class MeanChatScreen extends StatelessWidget {
               Expanded(
                 child: ListView.separated(
                   itemBuilder:
-                      (context, index) => ContainerOfChat(
-                        ontap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => ChatScreen(),
-                            ),
-                          );
-                        },
+                      (context, index) => Padding(
+                        padding: const EdgeInsets.only(right: AppPadding.p16),
+                        child: ContainerOfChat(
+                          ontap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => ChatScreen(),
+                              ),
+                            );
+                          },
+                        ),
                       ),
                   separatorBuilder:
                       (context, index) => verticalSpace(AppSize.s25),
-                  itemCount: 5,
+                  itemCount: 10,
                 ),
               ),
             ],

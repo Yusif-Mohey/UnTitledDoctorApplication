@@ -28,7 +28,7 @@ class FavScreen extends StatelessWidget {
                       ),
                   separatorBuilder:
                       (context, index) => verticalSpace(AppSize.s15),
-                  itemCount: 3,
+                  itemCount: 30,
                 ),
               ),
             ],

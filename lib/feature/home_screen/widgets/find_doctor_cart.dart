@@ -56,8 +56,8 @@ class FindDoctorCart extends StatelessWidget {
               ),
               CircleAvatar(
                 radius: AppSize.s25,
-                backgroundImage: NetworkImage(
-                  'https://i.pravatar.cc/150?img=3',
+                backgroundImage: const AssetImage(
+                  'assets/images/you_are_good_man.jpg',
                 ),
               ),
             ],
