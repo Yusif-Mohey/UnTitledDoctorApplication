@@ -2,6 +2,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:untitleddoctor/core/utils/images_manager.dart';
+import 'package:untitleddoctor/feature/auth/screen/login_screen.dart';
+import 'package:untitleddoctor/feature/auth/screen/signup_screen.dart';
 import '../../../onboarding/view/onboarding_view.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -18,7 +20,9 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => OnboardingScreen()),
+        // MaterialPageRoute(builder: (_) => OnboardingScreen()),
+        MaterialPageRoute(builder: (_) => SignUpScreen()),
+        // MaterialPageRoute(builder: (_) => LoginScreen()),
       );
     });
   }
