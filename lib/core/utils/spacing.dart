@@ -5,12 +5,9 @@ SizedBox verticalSpace(double height) => SizedBox(height: height.h);
 
 SizedBox horizontalSpace(double width) => SizedBox(width: width.w);
 
-class ScreenSizes {
-  static late double kScreenWidth;
-  static late double kScreenHeight;
-
-  static void init(BuildContext context) {
-    kScreenWidth = MediaQuery.of(context).size.width;
-    kScreenHeight = MediaQuery.of(context).size.height;
-  }
+abstract class ScreenSizes {
+  static double kScreenWidth(BuildContext context) =>
+      MediaQuery.of(context).size.width;
+  static double kScreenHeight(BuildContext context) =>
+      MediaQuery.of(context).size.height;
 }

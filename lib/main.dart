@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:untitleddoctor/core/utils/color_manager.dart';
-// import 'package:untitleddoctor/feature/chat/view/chat_screen.dart';
-// import 'package:untitleddoctor/feature/chat/view/mean_chat_screen.dart';
-
+import 'package:untitleddoctor/core/utils/storage/api_constants.dart';
 import 'feature/splash/presentation/pages/splash_screen.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Supabase.initialize(
+    url: ApiConstants.supabaseUrl,
+    anonKey: ApiConstants.supabaseKey,
+  );
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
       statusBarColor: ColorManager.primaryColor,
